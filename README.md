@@ -1,16 +1,9 @@
-# curso_accesibilidad
+# Curso Accesibilidad Flutter
 
-A new Flutter project.
+## Ejercicios
 
-## Getting Started
+* Ejemplo 1: Live Region, Semántica de botones, onIncrease y onDecrease para listas horizontales.
+* Ejemplo 2: MergeSemantics, ExcludeSemantics, espacio mínimo para la semántica.
+* Ejemplo 3: Tab menús, listas, indicadores de páginas.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
