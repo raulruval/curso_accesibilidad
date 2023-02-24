@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:curso_accesibilidad/pages/ejemplo2_page.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +23,7 @@ class _Ejemplo1PageState extends State<Ejemplo1Page> {
       appBar: AppBar(
         leading: Semantics(
           label: 'Menú desplegable',
+          header: true,
           child: IconButton(
             icon: const Icon(Icons.menu),
             onPressed: () {},
@@ -103,11 +102,12 @@ class _Ejemplo1PageState extends State<Ejemplo1Page> {
                   height: 20,
                 ),
                 ElevatedButton(
-                    onPressed: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Ejemplo2Page())),
-                    child: const Text('Siguiente ejemplo'))
+                  onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Ejemplo2Page())),
+                  child: const Text('Siguiente ejemplo'),
+                )
               ],
             ),
           ),

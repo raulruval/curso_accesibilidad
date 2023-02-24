@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ejemplo3_page.dart';
+
 class Ejemplo2Page extends StatelessWidget {
   const Ejemplo2Page({super.key});
 
@@ -80,6 +82,21 @@ class Ejemplo2Page extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            const SizedBox(
+              height: 100,
+            ),
+            const ExcludeSemantics(
+                child: Text('Esto no quiero que me lo digas...')),
+            const SizedBox(
+              height: 50,
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Ejemplo3Page())),
+              child: const Text('Siguiente ejemplo'),
             ),
           ],
         ),
