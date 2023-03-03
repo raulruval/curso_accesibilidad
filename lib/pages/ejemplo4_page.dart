@@ -13,6 +13,7 @@ class _Ejemplo4PageState extends State<Ejemplo4Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: MergeSemantics(
           child: Column(

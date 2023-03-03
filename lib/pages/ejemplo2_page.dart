@@ -91,6 +91,26 @@ class Ejemplo2Page extends StatelessWidget {
             const SizedBox(
               height: 50,
             ),
+            GestureDetector(
+              child: Semantics(
+                link: true,
+                hint: 'External link',
+                child: const ExcludeSemantics(
+                  child: Text(
+                    'Link to external page Title',
+                    style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: Colors.blue),
+                  ),
+                ),
+              ),
+              onTap: () {
+                print('Go to external page');
+              },
+            ),
+            const SizedBox(
+              height: 50,
+            ),
             ElevatedButton(
               onPressed: () => Navigator.push(
                   context,
