@@ -1,3 +1,4 @@
+import 'package:curso_accesibilidad/pages/custom_stepper.dart';
 import 'package:flutter/material.dart';
 
 import 'ejemplo4_page.dart';
@@ -13,6 +14,7 @@ class _Ejemplo3PageState extends State<Ejemplo3Page>
     with SingleTickerProviderStateMixin {
   final List<String> items = List<String>.generate(10, (i) => "Item ${i + 1}");
   late TabController _tabController;
+  var currentStep = 0;
 
   @override
   void initState() {
@@ -53,6 +55,22 @@ class _Ejemplo3PageState extends State<Ejemplo3Page>
                   },
                 ),
               ),
+              CustomStepper(currentStep: currentStep, steps: const [
+                CustomStep(
+                  title: Text('Paso 1'),
+                  content: Icon(Icons.abc),
+                  state: StepState.complete,
+                  buttonNextStepTitle: 'Siguiente',
+                  semanticTitle: 'Paso 1',
+                ),
+                CustomStep(
+                  title: Text('Paso 2'),
+                  content: Icon(Icons.ac_unit),
+                  state: StepState.editing,
+                  buttonNextStepTitle: 'Siguiente',
+                  semanticTitle: 'Paso 2',
+                ),
+              ]),
               ElevatedButton(
                 onPressed: () => Navigator.push(
                     context,
